@@ -1,0 +1,23 @@
+<h1>Listing spike_pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spike_pages.each do |spike_page| %>
+      <tr>
+        <td><%= link_to 'Show', spike_page %></td>
+        <td><%= link_to 'Edit', edit_spike_page_path(spike_page) %></td>
+        <td><%= link_to 'Destroy', spike_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spike page', new_spike_page_path %>
